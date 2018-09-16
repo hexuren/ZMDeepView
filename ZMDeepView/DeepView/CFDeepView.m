@@ -48,7 +48,7 @@
 - (void)setDataArrOfX:(NSArray *)dataArrOfX {
     _dataArrOfX = dataArrOfX;
     [self addXAxisViews];
-//    [self addLinesView];
+    [self addLinesView];
 }
 
 //买点数据
@@ -70,8 +70,8 @@
 - (void)addLineChartView {
     _lineChartView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, _contentView.bounds.size.width, _contentView.bounds.size.height-20)];
     _lineChartView.layer.masksToBounds = YES;
-//    _lineChartView.layer.borderWidth = 0.5;
-//    _lineChartView.layer.borderColor = [UIColor colorWithRed:216/255.0 green:216/255.0  blue:216/255.0  alpha:1].CGColor;
+    _lineChartView.layer.borderWidth = 0.5;
+    _lineChartView.layer.borderColor = [UIColor colorWithRed:216/255.0 green:216/255.0  blue:216/255.0  alpha:1].CGColor;
     _lineChartView.backgroundColor = [UIColor clearColor];
     [_contentView addSubview:_lineChartView];
 }
@@ -115,16 +115,16 @@
 }
 
 - (void)addLinesView {
-    CGFloat white = _lineChartView.bounds.size.height /( _dataArrOfY.count - 1);
-    CGFloat height = _lineChartView.bounds.size.width /( _dataArrOfX.count - 1);
+    CGFloat white = _lineChartView.bounds.size.height /4;
+    CGFloat height = _lineChartView.bounds.size.width /4;
     //横格
-    for (int i = 0;i < _dataArrOfY.count - 2 ;i++ ) {
+    for (int i = 0;i < 4;i++ ) {
         UIView *hengView = [[UIView alloc] initWithFrame:CGRectMake(0, white * (i + 1),_lineChartView.bounds.size.width , 0.5)];
         hengView.backgroundColor = [UIColor colorWithRed:216/255.0 green:216/255.0  blue:216/255.0  alpha:1];
         [_lineChartView addSubview:hengView];
     }
     //竖格
-    for (int i = 0;i< _dataArrOfX.count - 2 ;i++ ) {
+    for (int i = 0;i< 4;i++ ) {
         
         UIView *shuView = [[UIView alloc]initWithFrame:CGRectMake(height * (i + 1), 0, 0.5, _lineChartView.bounds.size.height)];
         shuView.backgroundColor = [UIColor colorWithRed:216/255.0 green:216/255.0  blue:216/255.0  alpha:1];
