@@ -65,7 +65,7 @@
     
     CGFloat stringY = (50 - priceSize.height - volumeSize.height - 5)/2 + originY;
     CGFloat priceStringX = (110 - priceSize.width)/2 + originX;
-    CGFloat volumeStringX = (110 - priceSize.width)/2 + originX;
+    CGFloat volumeStringX = (110 - volumeSize.width)/2 + originX;
     [priceString drawAtPoint:CGPointMake(priceStringX , stringY) withAttributes:attribute];
     [volumeString drawAtPoint:CGPointMake(volumeStringX, stringY + priceSize.height + 5) withAttributes:attribute];
     

@@ -79,8 +79,8 @@
 }
 
 - (void)update:(UIButton *)btn {
-    _lineChatView = nil;
     [_lineChatView removeFromSuperview];
+    _lineChatView = nil;
     _lineChatView = [[CFDeepView alloc] initWithFrame:CGRectMake(15, 100, self.view.frame.size.width - 30, 230)];
     _lineChatView.backgroundColor = [UIColor colorWithRed:247/255.0 green:247/255.0  blue:247/255.0  alpha:1];
     [self.view addSubview:_lineChatView];

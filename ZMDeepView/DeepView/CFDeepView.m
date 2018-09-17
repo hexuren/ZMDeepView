@@ -237,7 +237,7 @@
     
     CABasicAnimation *anmi1 = [CABasicAnimation animation];
     anmi1.keyPath = @"bounds";
-    anmi1.duration = 0.01f;
+    anmi1.duration = 0.0001f;
     anmi1.toValue = [NSValue valueWithCGRect:CGRectMake(0, 0, 2*lastPoint.x, _lineChartView.bounds.size.height)];
     anmi1.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     anmi1.fillMode = kCAFillModeForwards;
@@ -346,7 +346,7 @@
     
     CABasicAnimation *anmi1 = [CABasicAnimation animation];
     anmi1.keyPath = @"bounds";
-    anmi1.duration = 0.01f;
+    anmi1.duration = 0.0001f;
     anmi1.toValue = [NSValue valueWithCGRect:CGRectMake(0, 0, 2*lastPoint.x, _lineChartView.bounds.size.height)];
     anmi1.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     anmi1.fillMode = kCAFillModeForwards;
