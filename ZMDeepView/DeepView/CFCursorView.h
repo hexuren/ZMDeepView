@@ -14,4 +14,6 @@
 
 @property (nonatomic, strong) NSDictionary *selectModel;
 
+@property (nonatomic, strong) NSString *symbol;
+
 @end

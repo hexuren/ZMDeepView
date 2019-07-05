@@ -10,6 +10,8 @@
 
 @interface CFDeepView : UIView
 
+/** 当前交易对 */
+@property (nonatomic,strong) NSString *symbol;
 /** 卖点数据 */
 @property (nonatomic,strong) NSArray *sellDataArrOfPoint;
 /** 买点数据 */
@@ -18,5 +20,9 @@
 @property (nonatomic, strong) NSArray *dataArrOfY;
 /** X轴坐标数据 */
 @property (nonatomic, strong) NSArray *dataArrOfX;
+
+@property (nonatomic, assign) double maxY;
+
+- (void)deepViewTouchBlock:(void(^)(BOOL ifTouching))block;
 
 @end
